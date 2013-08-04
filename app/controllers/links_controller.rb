@@ -1,7 +1,7 @@
 class LinksController < ApplicationController
   respond_to :json
-  before_action :find_tag
-  before_action :find_link, only: %w(show destroy)
+  before_filter :find_tag
+  before_filter :find_link, only: %w(show destroy)
 
   def index
     @links = resource.where search_params
@@ -45,14 +45,14 @@ class LinksController < ApplicationController
   def find_tag
     return true unless params[:tag_id].present?
 
-    @tag = Tag.find params[:tag_id]
+    @tag = Tag.where(params[:tag_id]).first
 
     render json: { errors: ['Tag not found'] }, status: 404 and return \
       unless @tag.present?
   end
 
   def find_link
-    @link = resource.find params[:id]
+    @link = resource.where(id: params[:id]).first
 
     render json: { errors: ['Link not found'] }, status: 404 and return \
       unless @link.present?

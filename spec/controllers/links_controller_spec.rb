@@ -65,7 +65,12 @@ describe LinksController do
 
   describe "posting a new link" do
     context "with valid parameters" do
-      before { post :create, link: { title: 'test', url: 'http://example.com' } }
+      before do
+        post :create, link: {
+          title: 'test',
+          url: 'http://example.com'
+        }, format: 'json'
+      end
 
       it "redirects to the post" do
         response.should be_success
@@ -89,7 +94,7 @@ describe LinksController do
       before { delete :destroy, id: link_id }
 
       it "removes the link from the db" do
-        Link.find(link_id).should be_nil
+        Link.where(id: link_id).should_not be_any
       end
 
       it "redirects to index" do
@@ -100,8 +105,8 @@ describe LinksController do
     context "that has not been posted" do
       before { delete :destroy, id: link_id+1 }
 
-      it "redirects to index with an alert" do
-        response.should be_redirect
+      it "throws a 404 error" do
+        response.should be_missing
       end
     end
   end
