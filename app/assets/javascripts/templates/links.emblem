@@ -1,6 +1,6 @@
 each controller
   dt
-    Choongang.LinkVotesView link=link
+    Choongang.LinkVotesView votes=123
     a href='#' click="preview"
       = title
   dd
