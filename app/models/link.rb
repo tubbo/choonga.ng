@@ -1,6 +1,7 @@
 class Link < ActiveRecord::Base
   belongs_to :service
   belongs_to :tag
+  belongs_to :user
 
   attr_accessor :tag_name
 
@@ -11,6 +12,7 @@ class Link < ActiveRecord::Base
   validates :url, presence: true
   validates :service_id, presence: true
   validates :tag_id, presence: true
+  validates :user_id, presence: true
 
   scope :latest, -> { order 'created_at desc' }
 

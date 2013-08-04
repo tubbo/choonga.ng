@@ -2,6 +2,7 @@ class LinkSerializer < ActiveModel::Serializer
   attributes :id, :title, :url, :name
   has_one :service
   has_one :tag
+  has_one :user
 
   def name
     object.title.parameterize
