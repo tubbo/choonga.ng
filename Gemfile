@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '1.9.3'
 
-gem 'rails', '4.0.0'
+gem 'rails', '~> 3.2'
 gem 'pg'
 gem 'devise'
 gem 'active_model_serializers'
@@ -9,13 +9,14 @@ gem 'active_model_serializers'
 gem 'jbuilder'
 gem 'haml-rails'
 #gem 'high_voltage'
+gem 'carrierwave'
 
 gem 'jquery-rails',     '2.2.2'
-gem 'sass-rails',       '~> 4.0'
-gem 'coffee-rails',     '~> 4.0'
+gem 'sass-rails'
+gem 'coffee-rails'
 gem 'zurb-foundation',  '>= 4.0'
 gem 'uglifier',         '~> 1.3'
-gem 'teaspoon'
+
 gem 'ember-rails'
 gem 'emblem-rails'
 gem 'ember_script-rails'
@@ -27,6 +28,7 @@ end
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'teaspoon'
 end
 
 group :test do
