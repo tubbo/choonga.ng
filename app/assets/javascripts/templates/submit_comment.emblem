@@ -1,0 +1,5 @@
+fieldset
+  legend add comment
+  Ember.TextArea valueBinding=body name='comment[body]'
+fieldset
+  input type="submit" value="Submit"
