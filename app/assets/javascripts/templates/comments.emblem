@@ -1,4 +1,10 @@
-h2 all comments
 li Comment
 li Comment
 li Comment
+
+each controller
+  li.comment
+    .body
+      = body
+    .credit
+      = user.name
