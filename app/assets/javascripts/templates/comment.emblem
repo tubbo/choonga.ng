@@ -1,4 +1,4 @@
 .body
-  = body
+  = comment.body
 .credit
-  = user.name
+  = comment.user.name

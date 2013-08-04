@@ -1,4 +1,9 @@
 if post
   Choongang.SubmitCommentView
-each controller
-  Choongang.CommentView controller=comment
+else
+  h2 all comments
+if comments
+  each comment in comments
+    Choongang.CommentView comment=comment
+else
+  em no comments to display
