@@ -1,6 +1,7 @@
 #= require ./boot
 #= require ./store
 #= require_tree ./models
+#= require ./controllers/links_controller
 #= require_tree ./controllers
 #= require_tree ./views
 #= require_tree ./helpers
