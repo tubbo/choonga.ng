@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  respond_to :json
+  respond_to :json, :html
   before_filter :find_comment, only: %w(show update destroy)
 
   def index
