@@ -1,10 +1,4 @@
-li Comment
-li Comment
-li Comment
-
+if post
+  Choongang.SubmitCommentView
 each controller
-  li.comment
-    .body
-      = body
-    .credit
-      = user.name
+  Choongang.CommentView controller=comment
