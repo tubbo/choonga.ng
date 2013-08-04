@@ -1,5 +1,5 @@
 require 'spec_helper'
 
 describe Service do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "instructs the frontend on how to render a given link inline"
 end
