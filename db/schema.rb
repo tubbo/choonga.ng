@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130804072215) do
+ActiveRecord::Schema.define(:version => 20130804080247) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -54,10 +54,12 @@ ActiveRecord::Schema.define(:version => 20130804072215) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "votes"
+    t.integer  "user_id"
   end
 
   add_index "links", ["service_id"], :name => "index_links_on_service_id"
   add_index "links", ["tag_id"], :name => "index_links_on_tag_id"
+  add_index "links", ["user_id"], :name => "index_links_on_user_id"
 
   create_table "services", :force => true do |t|
     t.string   "name"

@@ -1,7 +1,8 @@
 class LinksController < ApplicationController
   respond_to :json, :html
   before_filter :find_tag
-  before_filter :find_link, only: %w(show destroy upvote downvote)
+  before_filter :find_link, only: %w(show destroy vote)
+  before_filter :authenticate_user!, except: %w(index latest show)
 
   def index
     @links = resource.where search_params
@@ -9,7 +10,7 @@ class LinksController < ApplicationController
     respond_with @links
   end
 
-  def newest
+  def latest
     @links = resource.latest.where search_params
 
     respond_with @links
@@ -31,11 +32,12 @@ class LinksController < ApplicationController
     end
   end
 
-  # PUT /links/1 << "link": { "vote": "-1|+1" }
-  def update
-    votes = case vote_difference
-    when '-1' then @link.votes - 1
-    when '+1' then @link.votes + 1
+  # PUT /links/1/up
+  # PUT /links/1/down
+  def vote
+    votes = case params[:direction]
+    when 'up' then @link.votes += 1
+    when 'down' then @link.votes += 1
     else
       @link.votes
     end
@@ -43,7 +45,16 @@ class LinksController < ApplicationController
     if @link.update_attributes votes: votes
       respond_with @link
     else
-      render json: { errors: ['Vote did not save on link.'] }, status: 401
+      render json: { errors: ['Could not vote on link.'] }, status: 401
+    end
+  end
+
+  # PUT /links/1 << "link": { "votes": "-1|+1" }
+  def update
+    if @link.update_attributes edit_params
+      respond_with @link
+    else
+      render json: { errors: @link.errors.full_messages }, status: 401
     end
   end
 
@@ -86,11 +97,12 @@ class LinksController < ApplicationController
     params.permit(:id, :title, :tag, :name)
   end
 
-  def post_params
-    params.require(:link).permit(:title, :url, :tag_name)
+  def edit_params
+    return unless current_user.is_admin?
+    params.require(:link).permit(:title, :url, :tag_id, :service_id)
   end
 
-  def vote_difference
-    params.requrie(:link).permit(:votes)
+  def post_params
+    params.require(:link).permit(:title, :url, :tag_name)
   end
 end

@@ -10,12 +10,22 @@ Choongang::Application.routes.draw do
     get '/profile' => 'devise/registrations#edit'
   end
 
+  resources :comments, only: %w(index)
+
   resources :tags, only: %w(show) do
-    resources :links, only: %w(index)
+    resources :links, only: %w(index) do
+      resources :comments, only: %w(index show)
+    end
   end
 
   resources :links, except: %w(edit) do
-    collection { get :newest }
+    collection { get :latest }
+    member do
+      put :up, as: :up_vote
+      put :down, as: :down_vote
+    end
+
+    resources :comments
   end
 
   root to: 'application#index'

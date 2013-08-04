@@ -14,6 +14,15 @@ class Link < ActiveRecord::Base
 
   scope :latest, -> { order 'created_at desc' }
 
+  def vote direction
+    case direction
+    when :up then self.votes += 1
+    when :down then self.votes -= 1
+    else
+      self.votes
+    end
+  end
+
   private
   def find_service_from_url
     self.service = case url
