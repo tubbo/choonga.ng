@@ -1,7 +1,7 @@
 if post
   Choongang.SubmitCommentView
 else
-  h2 all comments
+  h4 all comments
 if comments
   each comment in comments
     Choongang.CommentView comment=comment
