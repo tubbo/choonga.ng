@@ -2,16 +2,26 @@ class CommentsController < ApplicationController
   respond_to :json, :html
   before_filter :find_comment, only: %w(show update destroy)
 
+  # Collection view for Comments. Returns all comments filtered by a particular Link
+  # or all comments on the site.
+  #
+  # GET /links/1/comments
   def index
     @comments = resource.where search_params
 
     respond_with @comments
   end
 
+  # Permalink to a single comment thread.
+  #
+  # GET /links/1/comments/1
   def show
     respond_with @comment
   end
 
+  # Creates a new Comment on the given Link.
+  #
+  # POST /links/1/comments
   def create
     @comment = resource.new post_params
 
@@ -23,6 +33,9 @@ class CommentsController < ApplicationController
     end
   end
 
+  # Edit a Comment made on the site.
+  #
+  # PUT /links/1/comments/1
   def update
     if @comment.update_attributes edit_params
       respond_with @comment, notice: "Comment updated."
@@ -32,6 +45,9 @@ class CommentsController < ApplicationController
     end
   end
 
+  # Remove a Comment made on the site.
+  #
+  # DELETE /links/1/comments/1
   def destroy
     @link = @comment.link
     if @comment.destroy

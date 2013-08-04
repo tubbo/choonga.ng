@@ -3,3 +3,4 @@ class Choongang.SubmitCommentView extends Ember.View
   classNames: ['submit-comment']
   attributeBindings: ['method', 'action']
   method: 'POST'
+  action: ~> "/links/#{link.id}/comments"
