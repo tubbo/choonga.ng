@@ -5,6 +5,13 @@ header {
 
     a {
       font-weight: bold;
+
+      &.title {
+        color: lighten(#000, 30%);
+        &:hover {
+          color: #000;
+        }
+      }
     }
 
     span {

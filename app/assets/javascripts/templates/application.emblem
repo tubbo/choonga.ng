@@ -1,6 +1,6 @@
 header.row
   nav
-    strong choonga.ng
+    linkTo 'front_page' class="title" | choonga.ng
     span &nbsp;/&nbsp;
     linkTo 'links.latest' | latest
     span &nbsp;/&nbsp;

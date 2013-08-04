@@ -1,4 +1,4 @@
 class Choongang.LinkVotesView extends Ember.View
-  template: Ember.Handlebars.compile '123' # TODO: Pass this data in
+  template: Ember.Handlebars.compile '{{votes}}'
   tagName: 'span'
   classNames: ['votes']

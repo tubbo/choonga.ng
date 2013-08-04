@@ -1,9 +1,18 @@
 each controller
   .info.columns.large-8
     dt
-      Choongang.LinkVotesView votes=123
+      / TODO: Data bind dat vote box!
+      span.votes = votes
       a href='#' click="preview" #{title}
     dd
+      if voted
+        strong voted!
+      else
+        strong vote&nbsp;
+        linkTo 'link.upvote' id | up
+        span &nbsp;/&nbsp;
+        linkTo 'link.downvote' id | down
+      span &nbsp;|&nbsp;
       linkTo 'link' id | comments
       span &nbsp;|&nbsp;
       a target="_blank" href=url go &raquo;

@@ -5,3 +5,4 @@ class Choongang.Link extends DS.Model
   service_id: DS.attr('number')
   tag_id: DS.attr('number')
   tag_name: DS.attr('string')
+  votes: DS.attr('number')
