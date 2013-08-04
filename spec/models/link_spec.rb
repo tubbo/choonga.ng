@@ -1,5 +1,5 @@
 require 'spec_helper'
 
 describe Link do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "is some kind of musical work posted to a tag on the site"
 end
