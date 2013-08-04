@@ -5,7 +5,5 @@ class Service < ActiveRecord::Base
   validates :name, presence: true
   #mount_uploader :icon, IconUploader
 
-  def self.web
-    where(name: 'Web').first
-  end
+  WEB_ID = 1
 end

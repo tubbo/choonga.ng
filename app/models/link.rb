@@ -11,6 +11,6 @@ class Link < ActiveRecord::Base
 
   private
   def set_service_to_web_when_none_are_found
-    self.service ||= Service.web
+    self.service_id ||= Service::WEB_ID
   end
 end
