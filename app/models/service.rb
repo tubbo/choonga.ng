@@ -1,3 +1,7 @@
 class Service < ActiveRecord::Base
-  attr_accessible :embed_code, :icon, :name
+  has_many :links
+  validates :embed_code, presence: true
+  validates :icon, presence: true
+  validates :name, presence: true
+  #mount_uploader :icon, IconUploader
 end
