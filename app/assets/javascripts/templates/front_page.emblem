@@ -1,7 +1,4 @@
 .row
-  .large-8.columns
-    p welcome to choongang, a place for posting the best tracks in the world.
-  .large-4.columns
-    Choongang.SubmitLinkView
+  p.greeting choongang is where you post the best tracks you've ever heard. vote on tracks others have posted and make fast friends as you collectively discover the most cutting-edge and interesting music the internet has to offer. choongang is a community of gormandizers that specialize infinding great music and bringing it to the masses.
 .row
   Choongang.LinksView
