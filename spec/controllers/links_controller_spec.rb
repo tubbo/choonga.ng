@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe LinksController do
+  fixtures :links
   let(:link) { links :afterhours }
 
   describe "viewing a collection" do
