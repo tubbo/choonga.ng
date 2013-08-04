@@ -11,6 +11,7 @@ gem 'haml-rails'
 #gem 'high_voltage'
 gem 'carrierwave'
 gem 'strong_parameters'
+gem 'puma'
 
 gem 'jquery-rails',     '2.2.2'
 gem 'sass-rails'
