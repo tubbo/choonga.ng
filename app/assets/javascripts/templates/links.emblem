@@ -5,6 +5,6 @@ each controller
   dd
     linkTo 'link' | comments
     span &nbsp;|&nbsp;
-    linkTo 'link.report' | report
+    linkTo 'link.report' click="report" | report
     span &nbsp;|&nbsp;
     a href=url go to url &raquo;
