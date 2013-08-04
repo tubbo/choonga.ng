@@ -2,3 +2,8 @@ soundcloud:
   name: 'Soundcloud'
   icon: 'soundcloud.png'
   embed_code: '<embed src="{{url}}" id="soundcloud"></embed>'
+
+web:
+  name: 'Web'
+  icon: 'www.png'
+  embed_code: '<a href="{{url}}>No preview available. Click here.</a>'
