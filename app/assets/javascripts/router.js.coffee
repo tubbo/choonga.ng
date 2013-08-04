@@ -1,3 +1,4 @@
-Choongang.Router.map (match)->
-  # match('/').to('index')
-
+Choongang.Router.map () ->
+  @route 'tag', { path: '/:tag_name' }
+  @route 'link', { path: '/:tag_name/:link_name' }
+  @route 'links', { path: '' }

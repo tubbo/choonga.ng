@@ -1,4 +1,4 @@
 Choongang.Store = DS.Store.extend
-  revision: 4
+  revision: 13
   adapter: DS.RESTAdapter.create()
 
