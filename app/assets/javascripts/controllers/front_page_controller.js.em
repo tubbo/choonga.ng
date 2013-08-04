@@ -1,0 +1,1 @@
+class Choongang.FrontPageController extends Choongang.LinksController
