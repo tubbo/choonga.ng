@@ -1,4 +1,4 @@
 class Choongang.LinkVotesView extends Ember.View
-  templateName: 'link_votes'
+  template: Ember.Handlebars.compile '{{votes}}'
   tagName: 'span'
   classNames: ['votes']
