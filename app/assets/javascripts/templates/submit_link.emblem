@@ -1,5 +1,6 @@
-formFor link
-  = input title
-  = input url
-  = input tag
-  = submit
+form submit='submitLink' id="submit-link"
+  .row
+    Ember.TextField valueBinding='title' name='title' viewName='titleField' placeholder='Title'
+    Ember.TextField valueBinding='url' name='url' viewName='urlField' placeholder='http://'
+  .row
+    input type="submit" value="Submit Link"
