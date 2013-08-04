@@ -2,10 +2,8 @@
 #= require ./store
 #= require_tree ./models
 #= require_tree ./controllers
-#= require ./views/links_view
 #= require_tree ./views
 #= require_tree ./helpers
-#= require ./templates/links
 #= require_tree ./templates
 #= require_tree ./routes
 #= require ./router
