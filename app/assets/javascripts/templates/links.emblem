@@ -1,8 +1,7 @@
 each controller
   dt
     Choongang.LinkVotesView votes=123
-    a href='#' click="preview"
-      = title
+    a href='#' click="preview" #{title}
   dd
     linkTo 'link' | comments
     span &nbsp;|&nbsp;

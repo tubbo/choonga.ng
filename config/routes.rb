@@ -3,7 +3,7 @@ Choongang::Application.routes.draw do
     resources :links, only: %w(index)
   end
 
-  resources :links, only: %w(index show create destroy)
+  resources :links, except: %w(new edit)
 
   root to: 'application#index'
 end
