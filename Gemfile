@@ -14,6 +14,7 @@ gem 'strong_parameters'
 gem 'puma'
 
 gem 'jquery-rails',     '2.2.2'
+gem 'underscore-rails'
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'zurb-foundation',  '>= 4.0'
