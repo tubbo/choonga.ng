@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130804014658) do
+ActiveRecord::Schema.define(:version => 20130804045649) do
 
   create_table "links", :force => true do |t|
     t.string   "title"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130804014658) do
     t.integer  "tag_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "votes"
   end
 
   add_index "links", ["service_id"], :name => "index_links_on_service_id"

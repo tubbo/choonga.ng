@@ -1,7 +1,7 @@
 class LinksController < ApplicationController
   respond_to :json
   before_filter :find_tag
-  before_filter :find_link, only: %w(show destroy)
+  before_filter :find_link, only: %w(show destroy upvote downvote)
 
   def index
     @links = resource.where search_params
@@ -13,6 +13,7 @@ class LinksController < ApplicationController
     respond_with @link
   end
 
+  # POST /links << "link" { "title": "A title", "url": "A url", "tag_name": "#tagname" }
   def create
     @link = resource.new post_params
 
@@ -21,6 +22,22 @@ class LinksController < ApplicationController
     else
       logger.error "Error posting link: #{@link.errors.full_messages}"
       render json: { errors: @link.errors.full_messages }, status: 406
+    end
+  end
+
+  # PUT /links/1 << "link": { "vote": "-1|+1" }
+  def update
+    votes = case vote_difference
+    when '-1' then @link.votes - 1
+    when '+1' then @link.votes + 1
+    else
+      @link.votes
+    end
+
+    if @link.update_attributes votes: votes
+      respond_with @link
+    else
+      render json: { errors: ['Vote did not save on link.'] }, status: 401
     end
   end
 
@@ -64,6 +81,10 @@ class LinksController < ApplicationController
   end
 
   def post_params
-    params.require(:link).permit(:title, :url, :tag_id, :service_id)
+    params.require(:link).permit(:title, :url, :tag_name)
+  end
+
+  def vote_difference
+    params.requrie(:link).permit(:votes)
   end
 end
