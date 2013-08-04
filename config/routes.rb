@@ -7,7 +7,7 @@ Choongang::Application.routes.draw do
     get '/login' => 'devise/sessions#new'
     get '/logout' => 'devise/sessions#destroy'
     get '/signup' => 'devise/registrations#new'
-    get '/profile' => 'users/registrations#show'
+    get '/profile' => 'devise/registrations#edit'
   end
 
   resources :tags, only: %w(show) do
