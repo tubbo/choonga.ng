@@ -83,8 +83,9 @@ describe LinksController do
   end
 
   describe "removing a link" do
+    let(:link_id) { link.id }
+
     context "that has already been posted" do
-      let(:link_id) { link.id }
       before { delete :destroy, id: link_id }
 
       it "removes the link from the db" do
