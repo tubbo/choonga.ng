@@ -4,9 +4,12 @@ header.row
     span &nbsp;/&nbsp;
     linkTo 'links.latest' | latest
     span &nbsp;/&nbsp;
-    a href='/comments' comments
+    linkTo 'comments' | comments
     span &nbsp;/&nbsp;
-    linkTo 'submit_link' | post a link
+    if logged_in
+      linkTo 'submit_link' | post a link
+    else
+      modal href='/login' text='post a link'
     span &nbsp;/&nbsp;
     if logged_in
       a href='/profile' profile
@@ -19,3 +22,4 @@ header.row
 outlet
 #modal.reveal-modal.large
   / This is the modal dialog box.
+  / TODO: Open all links in this modal within the modal unless otherwise specified

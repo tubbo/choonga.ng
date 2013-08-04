@@ -9,9 +9,9 @@ each controller
         strong voted!
       else
         strong vote&nbsp;
-        linkTo 'link.upvote' id | up
+        a href='#' click='upvote' | up
         span &nbsp;/&nbsp;
-        linkTo 'link.downvote' id | down
+        a href='#' click='downvote' | down
       span &nbsp;|&nbsp;
       linkTo 'link' id | comments
       span &nbsp;|&nbsp;
