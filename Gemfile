@@ -3,15 +3,14 @@ ruby '1.9.3'
 
 gem 'rails', '~> 3.2'
 gem 'pg'
+gem 'puma'
 gem 'devise'
 gem 'active_model_serializers'
-#gem 'draper'
 gem 'jbuilder'
 gem 'haml-rails'
-#gem 'high_voltage'
 gem 'carrierwave'
 gem 'strong_parameters'
-gem 'puma'
+gem 'mini_magick'
 
 gem 'jquery-rails',     '2.2.2'
 gem 'underscore-rails'
@@ -23,7 +22,6 @@ gem 'uglifier',         '~> 1.3'
 gem 'ember-rails'
 gem 'emblem-rails'
 gem 'ember_script-rails'
-#gem 'therubyracer', :platforms => :ruby
 
 group :development do
   gem 'meta_request'
