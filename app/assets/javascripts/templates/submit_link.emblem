@@ -1,0 +1,5 @@
+formFor link
+  = input title
+  = input url
+  = input tag
+  = submit

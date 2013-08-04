@@ -1,6 +1,4 @@
 .row
-  h1 choongang
-.row
   dl
     each links
       dt = title
