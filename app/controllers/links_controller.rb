@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  respond_to :json
+  respond_to :json, :html
   before_filter :find_tag
   before_filter :find_link, only: %w(show destroy upvote downvote)
 
@@ -10,6 +10,12 @@ class LinksController < ApplicationController
   end
 
   def show
+    respond_with @link
+  end
+
+  def new
+    @link = Link.new
+
     respond_with @link
   end
 
@@ -77,7 +83,7 @@ class LinksController < ApplicationController
   end
 
   def search_params
-    params.permit(:title, :tag)
+    params.permit(:id, :title, :tag, :name)
   end
 
   def post_params

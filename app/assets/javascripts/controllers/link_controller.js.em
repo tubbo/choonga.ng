@@ -1,0 +1,1 @@
+class Choongang.LinkController extends Ember.ObjectController

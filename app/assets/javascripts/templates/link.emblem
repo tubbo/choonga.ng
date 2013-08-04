@@ -1,2 +1,12 @@
-h2 = id
-p This is the link view
+dl.links.row
+  dt
+    Choongang.LinkVotesView votes=123
+    a href='#' click="preview" #{title}
+  dd
+    linkTo 'link' id | comments
+    span &nbsp;|&nbsp;
+    a href='#' click="preview" | report
+    span &nbsp;|&nbsp;
+    a target="_blank" href=url go to url &raquo;
+.row
+  Choongang.CommentsView

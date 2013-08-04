@@ -1,0 +1,11 @@
+header.row
+  h1 choongang
+  nav
+    if logged_in
+      a href='/links/new' post a link
+    else
+      a href='/login' log in
+      span &nbsp;/&nbsp;
+      a href='/signup' sign up
+  .clear
+outlet
