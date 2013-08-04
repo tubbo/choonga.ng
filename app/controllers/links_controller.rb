@@ -13,12 +13,6 @@ class LinksController < ApplicationController
     respond_with @link
   end
 
-  def new
-    @link = Link.new
-
-    respond_with @link
-  end
-
   # POST /links << "link" { "title": "A title", "url": "A url", "tag_name": "#tagname" }
   def create
     @link = resource.new post_params

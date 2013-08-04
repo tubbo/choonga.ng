@@ -3,7 +3,7 @@ each controller
     Choongang.LinkVotesView votes=123
     a href='#' click="preview" #{title}
   dd
-    linkTo 'links.show' id | comments
+    linkTo 'link' id | comments
     span &nbsp;|&nbsp;
     a href='#' click="preview" | report
     span &nbsp;|&nbsp;
