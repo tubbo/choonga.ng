@@ -10,8 +10,31 @@ form.submit-link {
 dl.links {
   dt {
     font-size: 24px;
+
+    a {
+      position: relative;
+      top: 2px;
+      color: darken(#2ba6cb, 20%);
+
+      &:hover { color: darken(#2ba6cb, 40%); }
+    }
+
+    .votes {
+      font-size: 15px;
+      color: #CCC;
+      padding: 10px;
+      //background: #EEE;
+    }
   }
   dd {
-    a { margin-right: 15px; }
+    margin-left: 45px;
+
+    a,span {
+      font-size: 12px;
+    }
+    a { &:hover { color: darken(#2ba6cb, 20%); } }
+    span { color: #CCC; }
   }
 }
+
+

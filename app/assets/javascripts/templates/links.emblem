@@ -1,8 +1,11 @@
 each controller
   dt
-    Choongang.LinkVotesView id=id
-    a href=url
+    Choongang.LinkVotesView link=link
+    a href='#' click="preview"
       = title
   dd
     linkTo 'link' | comments
+    span &nbsp;|&nbsp;
     linkTo 'link.report' | report
+    span &nbsp;|&nbsp;
+    a href=url go to url &raquo;
