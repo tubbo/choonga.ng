@@ -13,7 +13,9 @@ header.row
       span &nbsp;/&nbsp;
       a href='/logout' log out
     else
-      a href='/login' log in
+      modal href='/login' text="log in"
       span &nbsp;/&nbsp;
-      a href='/signup' sign up
+      modal href='/signup' text="sign up"
 outlet
+#modal.reveal-modal.large
+  / This is the modal dialog box.
