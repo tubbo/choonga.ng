@@ -1,6 +1,17 @@
 form.submit-link {
+  margin-top: 25px;
+
   input[type="submit"] {
     float: right;
     font-size: 24px;
+  }
+}
+
+dl.links {
+  dt {
+    font-size: 24px;
+  }
+  dd {
+    a { margin-right: 15px; }
   }
 }

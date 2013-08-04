@@ -1,5 +1,8 @@
-.row
-  dl
-    each links
-      dt = title
-      dd comments | report
+each controller
+  dt
+    Choongang.LinkVotesView id=id
+    a href=url
+      = title
+  dd
+    linkTo 'link' | comments
+    linkTo 'link.report' | report

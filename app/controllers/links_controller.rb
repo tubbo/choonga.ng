@@ -17,9 +17,10 @@ class LinksController < ApplicationController
     @link = resource.new post_params
 
     if @link.save
-      render status: 201, notice: 'New link posted.'
+      respond_with @link, status: 200
     else
-      render json: { errors: @link.errors.full_messages }, status: 200
+      logger.error "Error posting link: #{@link.errors.full_messages}"
+      render json: { errors: @link.errors.full_messages }, status: 406
     end
   end
 

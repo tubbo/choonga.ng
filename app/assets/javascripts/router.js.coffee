@@ -1,4 +1,5 @@
 Choongang.Router.map () ->
-  @route 'tag', { path: '/:tag_name' }
-  @route 'link', { path: '/:tag_name/:link_name' }
+  @route 'tag', { path: '/:tag' }
+  @route 'link', { path: '/:tag/:name' }
+  @route 'link.report', { path: '/:tag/:name/report' }
   @route 'front_page', { path: '' }
