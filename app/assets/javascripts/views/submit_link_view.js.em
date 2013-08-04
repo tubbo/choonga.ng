@@ -11,7 +11,7 @@ class Choongang.SubmitLinkView extends Ember.View
       data: { link: attributes }
       dataType: 'json'
       method: 'POST'
-      success: -> @$().html('Link has been posted!')
+      success: -> alert 'Link has been posted!'
       error: -> alert "Error posting link."
     false
   _attrsToJSON: (result, element) ->
