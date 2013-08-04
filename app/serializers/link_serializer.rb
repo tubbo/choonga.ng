@@ -4,6 +4,10 @@ class LinkSerializer < ActiveModel::Serializer
   has_one :tag
 
   def name
-    title.parameterize
+    object.title.parameterize
+  end
+
+  def tag_name
+    object.tag.name
   end
 end

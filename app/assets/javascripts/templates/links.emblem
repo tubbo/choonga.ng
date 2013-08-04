@@ -1,10 +1,10 @@
-each controller
+each link in controller
   dt
     Choongang.LinkVotesView votes=123
-    a href='#' click="preview" #{title}
+    a href='#' click="preview" #{link.title}
   dd
-    linkTo 'link' | comments
+    linkTo 'link' link.name | comments
     span &nbsp;|&nbsp;
-    linkTo 'link.report' click="report" | report
+    a href='#' click="preview" | report
     span &nbsp;|&nbsp;
-    a href=url go to url &raquo;
+    a target="_blank" href=link.url go to url &raquo;
