@@ -9,6 +9,12 @@ class LinksController < ApplicationController
     respond_with @links
   end
 
+  def newest
+    @links = resource.latest.where search_params
+
+    respond_with @links
+  end
+
   def show
     respond_with @link
   end

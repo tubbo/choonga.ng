@@ -1,11 +1,19 @@
 header.row
-  h1 choongang
   nav
+    strong choonga.ng
+    span &nbsp;/&nbsp;
+    linkTo 'links.newest' | newest
+    span &nbsp;/&nbsp;
+    a href='/comments' comments
+    span &nbsp;/&nbsp;
+    linkTo 'submit_link' | post a link
+    span &nbsp;/&nbsp;
     if logged_in
-      a href='/links/new' post a link
+      a href='/profile' profile
+      span &nbsp;/&nbsp;
+      a href='/logout' log out
     else
       a href='/login' log in
       span &nbsp;/&nbsp;
       a href='/signup' sign up
-  .clear
 outlet

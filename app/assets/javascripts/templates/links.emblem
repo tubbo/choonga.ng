@@ -1,10 +1,11 @@
 each controller
-  dt
-    Choongang.LinkVotesView votes=123
-    a href='#' click="preview" #{title}
-  dd
-    linkTo 'link' id | comments
-    span &nbsp;|&nbsp;
-    a href='#' click="preview" | report
-    span &nbsp;|&nbsp;
-    a target="_blank" href=url go to url &raquo;
+  .info.columns.large-8
+    dt
+      Choongang.LinkVotesView votes=123
+      a href='#' click="preview" #{title}
+    dd
+      linkTo 'link' id | comments
+      span &nbsp;|&nbsp;
+      a target="_blank" href=url go &raquo;
+  .preview.columns.large-4
+    / Preview pane

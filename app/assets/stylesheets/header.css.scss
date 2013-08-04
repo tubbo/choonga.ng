@@ -1,11 +1,6 @@
 header {
   background: #EEE;
-  h1 {
-    margin-left: 15px;
-    float: left;
-  }
   nav {
-    float: right;
     margin: 15px;
 
     a {
@@ -16,5 +11,4 @@ header {
       color: #CCC;
     }
   }
-  .clear { clear: both; }
 }

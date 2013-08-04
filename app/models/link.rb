@@ -12,6 +12,8 @@ class Link < ActiveRecord::Base
   validates :service_id, presence: true
   validates :tag_id, presence: true
 
+  scope :latest, -> { order 'created_at desc' }
+
   private
   def find_service_from_url
     self.service = case url

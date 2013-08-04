@@ -3,7 +3,9 @@ Choongang::Application.routes.draw do
     resources :links, only: %w(index)
   end
 
-  resources :links, except: %w(edit)
+  resources :links, except: %w(edit) do
+    collection { get :newest }
+  end
 
   root to: 'application#index'
 end
