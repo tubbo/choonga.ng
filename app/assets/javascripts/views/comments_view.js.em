@@ -1,4 +1,4 @@
 class Choongang.CommentsView extends Ember.View
   templateName: 'comments'
   tagName: 'ul'
-  classNames: ['comments']
+  classNames: ['comments', 'row']
