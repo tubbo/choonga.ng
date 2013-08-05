@@ -1,0 +1,17 @@
+= choonga.ng api
+
+This is the API documentation for *choonga.ng*, a music discussion and
+link-sharing site. You can use the APIs below freely, as long as you are
+a member of choonga.ng and you pass your user authentication token along
+with every request. This API token can be found on `/profile` when you
+are logged in.
+
+- {Links API}[LinksController.html]
+- {Comments API}[CommentsController.html]
+- {Tags Read-Only API}[TagsController.html]
+
+== license
+
+All API documentation, as well as all source code, has been made free
+software  under the following license:
+<https://github.com/tubbo/choonga.ng#license>
