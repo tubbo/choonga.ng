@@ -6,8 +6,8 @@ ActiveAdmin.register Comment do
     default_actions
   end
 
-  form do
-    f.inputs :body
+  form do |f|
+    f.inputs :body, :link, :user
     f.actions
   end
 end
