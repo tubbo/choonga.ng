@@ -3,6 +3,5 @@ header.row
 section
   outlet
 footer
-  #modal.reveal-modal.large
-    / This is the modal dialog box.
-    / TODO: Open all links in this modal within the modal unless otherwise specified
+  Choongang.ModalView
+  Choongang.PagesView
