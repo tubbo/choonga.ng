@@ -12,6 +12,8 @@ gem 'carrierwave'
 gem 'strong_parameters'
 gem 'mini_magick'
 
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 gem 'jquery-rails',     '2.2.2'
 gem 'underscore-rails'
 gem 'sass-rails'

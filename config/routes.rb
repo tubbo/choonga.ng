@@ -1,4 +1,7 @@
 Choongang::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   custom_controllers = {
     registrations: "users/registrations",
     passwords: "users/passwords"
