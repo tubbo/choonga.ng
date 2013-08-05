@@ -4,8 +4,8 @@ ActiveAdmin.register User do
     default_actions
   end
 
-  form do
-    f.inputs :name
+  form do |f|
+    f.inputs :name, :password, :password_confirmation
     f.actions
   end
 end
