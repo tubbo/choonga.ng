@@ -10,14 +10,21 @@ the right if you wish to submit a bug report. Otherwise, read on!
 
 ## Object Model
 
-- Links are simply URLs with titles, posted by users. They are automatically previewable with a number of
+- **Links** are simply URLs with titles, posted by users. They are automatically previewable with a number of
   pre-defined "engines". For sites like Soundcloud, Spotify and Youtube,
   to name a few, the links will open in a preview pane for instant
   listening capability.
-- Comments can be posted to links by other users, and use Markdown as a
+- **Comments** can be posted to links by other users, and use Markdown as a
   basic formatting language.
-- Tags categorize the links into various genres for easy browsing and
+- **Tags** categorize the links into various genres for easy browsing and
   subscribing.
+- **Services** are not configurable, they are automatically discovered
+  based on the URL of the Link. They are attached to links and responsible
+  for providing the preview engines that allow for viewability directly on
+  the site.
+- Finally, **Users** are simple authentication models that allow the
+  users of the site to be identified with the application. Users can
+  comment on, vote on and post links.
 
 ## Setup
 
