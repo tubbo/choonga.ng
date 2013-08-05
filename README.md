@@ -7,7 +7,7 @@ small confession is appropriate here...I created this app as yet another
 experiment with Ember.js and Foundation, but it was designed to fill a
 void I actually had amongst my friends, that all of the music we send to
 each other is done in a relatively private manner, and it's somewhat
-cumbersome to share music betwen multiple people at once. Furthermore,
+cumbersome to share music between multiple people at once. Furthermore,
 it would be interesting to see the volume of people who are transferring
 tracks at any given moment. Thus, Choongang.
 
@@ -15,7 +15,18 @@ If you're reading this, you probably have some interest in the code, or
 you wish to submit some kind of issue. Check out the "Issues" link on
 the right if you wish to submit a bug report. Otherwise, read on!
 
-## Object Model
+## Philosophy
+
+The app was designed from the ground up to be API-centric. The frontend
+of <http://choonga.ng> is an Ember.js app that speaks JSON to our
+internal API. Anything that can be done on the site (except user
+management and registration) can also be done within the API.
+The API is free to use, as long as you provide your user's
+authentication token in each request. The API token can be viewed
+on the user edit page, and you can generate documentation by typing
+`rake doc`.
+
+### Object Model
 
 - **Links** are simply URLs with titles, posted by users. They are automatically previewable with a number of
   pre-defined "engines". For sites like Soundcloud, Spotify and Youtube,
