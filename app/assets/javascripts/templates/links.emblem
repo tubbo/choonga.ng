@@ -20,3 +20,5 @@ each controller
       a target="_blank" href=url go &raquo;
   .preview.columns.large-4
     / Preview pane
+else
+  em there are no links to display in this category
