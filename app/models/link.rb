@@ -7,14 +7,14 @@ class Link < ActiveRecord::Base
 
   attr_accessor :tag_name
 
-  before_validation :find_service_from_url
-  before_validation :find_tag_id_from_tag_name
+  #before_validation :find_service_from_url
+  #before_validation :find_tag_id_from_tag_name
 
   validates :title, presence: true
   validates :url, presence: true
-  validates :service_id, presence: true
-  validates :tag_id, presence: true
-  validates :user_id, presence: true
+  #validates :service_id, presence: true
+  #validates :tag_id, presence: true
+  #validates :user_id, presence: true
 
   scope :latest, -> { order 'created_at desc' }
 
@@ -29,13 +29,16 @@ class Link < ActiveRecord::Base
 
   private
   def find_service_from_url
-    self.service = case url
-    when /soundcloud/ then Service.where(name: 'Soundcloud').first
-    when /youtube/ then Service.where(name: 'YouTube').first
-    else
-      Service.where(name: 'Web').first
+    unless service_id.present?
+      self.service = case url
+      when /soundcloud/ then Service.where(name: 'Soundcloud').first
+      when /youtube/ then Service.where(name: 'YouTube').first
+      else
+        Service.where(name: 'Web').first
+      end
+
+      self.service_id = self.service.id
     end
-    self.service_id = self.service.id
   end
 
   def find_tag_id_from_tag_name

@@ -13,7 +13,9 @@ ActiveAdmin.register Link do
 
   controller do
     def permitted_params
-      params.permit link: [:title, :url, :tag_id, :service_id]
+      params.permit :utf8, :authenticity_token, :commit, link: [
+        :title, :url, :tag_id, :service_id
+      ]
     end
   end
 end
