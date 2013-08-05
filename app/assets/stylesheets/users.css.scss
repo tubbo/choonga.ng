@@ -1,0 +1,36 @@
+nav#users {
+  border-top: 1px solid #CCC;
+  padding-top: 5px;
+  float: right;
+
+  a {
+    display: inline-block;
+    margin-right: 25px;
+    font-size: 13px;
+  }
+}
+
+form.new_user, form.edit_user {
+  .row {
+    label {
+      @include grid-column(4);
+      text-align: right;
+      margin-top: 10px;
+    }
+
+    input,textarea {
+      @include grid-column(8);
+    }
+
+    input[type="checkbox"] {
+      margin-top: 10px;
+    }
+  }
+
+  .row.buttons {
+    input[type="submit"] {
+      float: right;
+      max-width: 100px;
+    }
+  }
+}

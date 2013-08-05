@@ -7,5 +7,6 @@ Choongang.Router.map () ->
     @route 'comments', { path: 'comments' }
   @route 'submit_link', { path: '/links/new' }
   @route 'front_page', { path: '' }
+  @route 'front_page', { path: '/links' }
 
 Choongang.Router.reopen location: 'history'
