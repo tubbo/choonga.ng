@@ -1,4 +1,6 @@
 class Service < ActiveRecord::Base
+  include ActiveModel::ForbiddenAttributesProtection
+
   has_many :links
   validates :embed_code, presence: true
   validates :icon, presence: true

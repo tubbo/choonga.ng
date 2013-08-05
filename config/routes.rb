@@ -2,11 +2,8 @@ Choongang::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  custom_controllers = {
-    registrations: "users/registrations",
-    passwords: "users/passwords"
-  }
-  devise_for :users, controllers: custom_controllers do
+  devise_for :users
+  devise_scope :user do
     get '/login' => 'devise/sessions#new'
     get '/logout' => 'devise/sessions#destroy'
     get '/signup' => 'devise/registrations#new'

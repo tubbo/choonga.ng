@@ -1,4 +1,6 @@
 class Link < ActiveRecord::Base
+  include ActiveModel::ForbiddenAttributesProtection
+
   belongs_to :service
   belongs_to :tag
   belongs_to :user
