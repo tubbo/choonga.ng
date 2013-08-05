@@ -11,6 +11,7 @@ gem 'haml-rails'
 gem 'carrierwave'
 gem 'strong_parameters'
 gem 'mini_magick'
+gem 'redcarpet'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 
