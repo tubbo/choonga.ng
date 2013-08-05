@@ -2,7 +2,14 @@
 
 A bookmark-sharing and discussion site for music and music-related
 links. Organized into a series of tags, the links on choonga.ng are
-specifically geared towards actual pieces of music for listening.
+specifically geared towards actual pieces of music for listening. A
+small confession is appropriate here...I created this app as yet another
+experiment with Ember.js and Foundation, but it was designed to fill a
+void I actually had amongst my friends, that all of the music we send to
+each other is done in a relatively private manner, and it's somewhat
+cumbersome to share music betwen multiple people at once. Furthermore,
+it would be interesting to see the volume of people who are transferring
+tracks at any given moment. Thus, Choongang.
 
 If you're reading this, you probably have some interest in the code, or
 you wish to submit some kind of issue. Check out the "Issues" link on
