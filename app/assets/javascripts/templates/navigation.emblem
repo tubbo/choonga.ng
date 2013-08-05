@@ -1,6 +1,6 @@
-linkTo 'front_page' class="title" | choonga.ng
+linkTo 'top_links' class="title" | choonga.ng
 span &nbsp;/&nbsp;
-linkTo 'latest' | latest
+linkTo 'latest_links' | latest
 span &nbsp;/&nbsp;
 linkTo 'comments' | comments
 span &nbsp;/&nbsp;

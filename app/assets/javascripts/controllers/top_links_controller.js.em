@@ -1,0 +1,1 @@
+class Choongang.TopLinksController extends Choongang.LinksController
