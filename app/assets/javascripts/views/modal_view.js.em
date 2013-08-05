@@ -3,6 +3,4 @@
 class Choongang.ModalView extends Ember.View
   tagName: 'div'
   classNames: ['reveal-modal', 'large']
-  attributeBindings: ['id']
-  id: 'modal'
   template: ''

@@ -3,5 +3,5 @@ header.row
 section
   outlet
 footer.row
-  Choongang.ModalView
   Choongang.PagesView
+  #modal.reveal-modal.large
