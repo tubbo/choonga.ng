@@ -1,4 +1,4 @@
 .row
-  p.greeting post the best tracks you've ever heard.
+  h4 top links
 .row
   Choongang.LinksView
