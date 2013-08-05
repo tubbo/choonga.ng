@@ -3,3 +3,7 @@
 
 en:
   hello: "Hello world"
+  active_admin:
+    dashboard_welcome:
+      welcome: "welcome to the choonga.ng admin interface"
+      call_to_action: "click the links above to administer content"

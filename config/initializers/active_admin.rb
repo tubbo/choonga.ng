@@ -203,5 +203,5 @@ ActiveAdmin.setup do |config|
   # hand side with a filter for each attribute of the registered model.
   # You can enable or disable them for all resources here.
   #
-  config.filters = true
+  config.filters = false
 end
