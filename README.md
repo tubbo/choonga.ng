@@ -32,19 +32,35 @@ get things going!
 
 ### Manual
 
-Assuming you know how to install a Rails app...go ahead and `bundle` the
-gem dependencies. Then, run `rake db` to set the database up. You can
-now run `bundle exec foreman start` to start the Rails server.
+This is assuming you know what goes into installing a Rails app..
 
-## Built With
+Download gem dependencies:
 
-- [Ember.js](http://emberjs.org) for the frontend application. We used
-  EmberScript and Emblem as a replacement for JavaScript and Handlebars,
-  respectively, to describe the logic and markup of the frontend app. Most
-  display logic has been written in this part of the app and is generally
-  what most users are interacting with.
-- [Ruby on Rails](http://rubyonrails.org) was used to build the JSON API
-  that communicates with the database, and integrates with the frontend
-  to provide stellar asset packaging tools.
-- [PostgreSQL](http://postgresql.org) is the database we use for
-  persistence.
+```bash
+$ bundle install
+```
+
+Set up the database:
+
+```bash
+$ rake db
+```
+
+Add content to the database from YAML configuration:
+
+```bash
+$ rake content
+```
+
+The one-time setup of the database is complete!
+
+You can now run the following to start the server:
+
+```bash
+$ foreman start
+```
+
+## Contributing
+
+All contributions are welcome, provided they include tests and are
+submitted in the form of a Git or GitHub pull request.
