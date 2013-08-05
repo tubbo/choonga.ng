@@ -1,0 +1,20 @@
+linkTo 'front_page' class="title" | choonga.ng
+span &nbsp;/&nbsp;
+linkTo 'latest' | latest
+span &nbsp;/&nbsp;
+linkTo 'comments' | comments
+span &nbsp;/&nbsp;
+if logged_in
+  linkTo 'submit_link' | post a link
+else
+  modal href='/login' text='post a link'
+span &nbsp;/&nbsp;
+if logged_in
+  a href='/profile' profile
+  span &nbsp;/&nbsp;
+  a href='/logout' log out
+else
+  modal href='/login' text="log in"
+  span &nbsp;/&nbsp;
+  modal href='/signup' text="sign up"
+

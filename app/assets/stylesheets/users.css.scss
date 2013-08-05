@@ -10,7 +10,7 @@ nav#users {
   }
 }
 
-form.new_user, form.edit_user {
+form.new_user {
   .row {
     label {
       @include grid-column(4);

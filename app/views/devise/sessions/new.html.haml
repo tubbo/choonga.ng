@@ -2,7 +2,7 @@
 = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
   .row
     = f.label :name, 'Username'
-    = f.email_field :name, autofocus: true
+    = f.text_field :name, autofocus: true
   .row
     = f.label :password
     = f.password_field :password
@@ -11,5 +11,5 @@
       = f.label :remember_me
       = f.check_box :remember_me
   .row.buttons
-    = f.submit "Sign in", class: 'button small'
+    = f.submit "log in", class: 'button small'
 = render "devise/shared/links"

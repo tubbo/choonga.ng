@@ -1,25 +1,8 @@
 header.row
-  nav
-    linkTo 'front_page' class="title" | choonga.ng
-    span &nbsp;/&nbsp;
-    linkTo 'links.latest' | latest
-    span &nbsp;/&nbsp;
-    linkTo 'comments' | comments
-    span &nbsp;/&nbsp;
-    if logged_in
-      linkTo 'submit_link' | post a link
-    else
-      modal href='/login' text='post a link'
-    span &nbsp;/&nbsp;
-    if logged_in
-      a href='/profile' profile
-      span &nbsp;/&nbsp;
-      a href='/logout' log out
-    else
-      modal href='/login' text="log in"
-      span &nbsp;/&nbsp;
-      modal href='/signup' text="sign up"
-outlet
-#modal.reveal-modal.large
-  / This is the modal dialog box.
-  / TODO: Open all links in this modal within the modal unless otherwise specified
+  Choongang.NavigationView
+section
+  outlet
+footer
+  #modal.reveal-modal.large
+    / This is the modal dialog box.
+    / TODO: Open all links in this modal within the modal unless otherwise specified
