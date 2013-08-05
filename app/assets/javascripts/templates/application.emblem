@@ -2,6 +2,6 @@ header.row
   Choongang.NavigationView
 section
   outlet
-footer
+footer.row
   Choongang.ModalView
   Choongang.PagesView

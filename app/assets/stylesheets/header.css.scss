@@ -19,3 +19,28 @@ header {
     }
   }
 }
+
+section {
+  min-height: 600px;
+}
+
+footer {
+  nav.about-pages {
+    float: right;
+    text-align: right;
+
+    a,span {
+      font-size: 12px;
+    }
+
+    a {
+      &:hover {
+        color: darken(#2ba6cb, 20%);
+      }
+    }
+
+    span {
+      color: #CCC;
+    }
+  }
+}
