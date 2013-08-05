@@ -1,0 +1,6 @@
+tags:
+  - house
+services:
+  soundcloud:
+    icon: 'soundcloud.png'
+    embed_code: 'test'
