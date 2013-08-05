@@ -1,6 +1,11 @@
+# This file contains bootstrapped content that should exist on the site
+# whenever it 
 tags:
   - house
 services:
+  web:
+    icon: 'web.png'
+    embed_code: '{{url}}'
   soundcloud:
     icon: 'soundcloud.png'
-    embed_code: 'test'
+    embed_code: '{{url}}'

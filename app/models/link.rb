@@ -1,3 +1,11 @@
+# Links are the main content objects of the site. They include a title
+# and URL, and they can be attached to both a Service and a Tag which
+# help to organize and preview the media they link to. The Service
+# association will give it an icon and allow it to be previewed inline.
+#
+# Links must be created by a User, and can be voted upon with the vote()
+# method. They also must include a title and url property, or else they
+# will not be considered valid.
 class Link < ActiveRecord::Base
   include ActiveModel::ForbiddenAttributesProtection
 
@@ -18,23 +26,14 @@ class Link < ActiveRecord::Base
 
   scope :latest, -> { order 'created_at desc' }
 
-  def vote direction
-    case direction
-    when :up then self.votes += 1
-    when :down then self.votes -= 1
-    else
-      self.votes
-    end
-  end
-
   private
   def find_service_from_url
     unless service_id.present?
       self.service = case url
-      when /soundcloud/ then Service.where(name: 'Soundcloud').first
-      when /youtube/ then Service.where(name: 'YouTube').first
+      when /soundcloud/ then Service.where(name: 'soundcloud').first
+      when /youtube/ then Service.where(name: 'youtube').first
       else
-        Service.where(name: 'Web').first
+        Service.where(name: 'web').first
       end
 
       self.service_id = self.service.id

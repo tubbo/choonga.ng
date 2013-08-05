@@ -60,6 +60,13 @@ Set up the database and add content from YAML configs:
 $ rake db content
 ```
 
+Generate a new secret token to authorize requests (you should probably
+save this somewhere outside of a Git repo):
+
+```bash
+$ export RAILS_SECRET=`rake secret`
+```
+
 You can now run the following to start the server:
 
 ```bash
