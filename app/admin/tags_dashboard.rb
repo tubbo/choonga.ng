@@ -8,4 +8,10 @@ ActiveAdmin.register Tag do
     f.input :name
     f.actions
   end
+
+  controller do
+    def permitted_params
+      params.permit tag: [:name]
+    end
+  end
 end

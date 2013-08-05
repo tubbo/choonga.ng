@@ -15,6 +15,6 @@ if logged_in
   a href='/logout' log out
 else
   modal href='/login' text="log in"
-  span &nbsp;/&nbsp;
-  modal href='/signup' text="sign up"
+  /span &nbsp;/&nbsp;
+  /modal href='/signup' text="sign up"
 

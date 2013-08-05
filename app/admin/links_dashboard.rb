@@ -7,7 +7,13 @@ ActiveAdmin.register Link do
   end
 
   form do |f|
-    f.inputs :title, :url
+    f.inputs :title, :url, :tag, :service
     f.actions
+  end
+
+  controller do
+    def permitted_params
+      params.permit link: [:title, :url, :tag_id, :service_id]
+    end
   end
 end
