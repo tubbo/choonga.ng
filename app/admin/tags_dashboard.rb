@@ -5,7 +5,7 @@ ActiveAdmin.register Tag do
   end
 
   form do |f|
-    f.input :name
+    f.inputs :name
     f.actions
   end
 
