@@ -1,4 +1,4 @@
-ActiveAdmin.register_page Comment do
+ActiveAdmin.register Comment do
   index do
     column :body
     column :link
