@@ -35,17 +35,6 @@ the right if you wish to submit a bug report. Otherwise, read on!
 
 ## Setup
 
-You can get choonga.ng running on your own machine in two different ways
-
-### Automatic
-
-It's probably best if you develop on the same platform that choonga.ng
-is running on, which is an Ubuntu 12 VM. We've provided Chef scripts and
-a Vagrantfile, so you should just need to run `vagrant up` to
-get things going!
-
-### Manual
-
 This is assuming you know what goes into installing a Rails app..
 
 Download gem dependencies:
@@ -54,19 +43,11 @@ Download gem dependencies:
 $ bundle install
 ```
 
-Set up the database:
+Set up the database and add content from YAML configs:
 
 ```bash
-$ rake db
+$ rake db content
 ```
-
-Add content to the database from YAML configuration:
-
-```bash
-$ rake content
-```
-
-The one-time setup of the database is complete!
 
 You can now run the following to start the server:
 
