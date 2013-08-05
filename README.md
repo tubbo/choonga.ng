@@ -1,4 +1,4 @@
-# choonga.ng
+# choongang
 
 A bookmark-sharing and discussion site for music and music-related
 links. Organized into a series of tags, the links on choonga.ng are
