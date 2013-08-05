@@ -4,7 +4,7 @@ ActiveAdmin.register Tag do
     default_actions
   end
 
-  form do
+  form do |f|
     f.input :name
     f.actions
   end
