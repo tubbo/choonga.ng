@@ -20,11 +20,7 @@ Choongang::Application.routes.draw do
 
   resources :links, except: %w(edit) do
     collection { get :latest }
-    member do
-      put :up, as: :up_vote
-      put :down, as: :down_vote
-    end
-
+    member { put 'vote/:direction' => 'links#vote' }
     resources :comments
   end
 

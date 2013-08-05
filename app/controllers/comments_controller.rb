@@ -1,6 +1,21 @@
+# Comments are an integral part of any discussion site, and the Comments
+# API of choonga.ng allows you to post comments on links using strictly
+# JSON.
+#
+# As with all API requests, error responses are returned in JSON using
+# the following format:
+#
+#     { "errors": [ "a list", "of error", "messages ] }
+#
+# Successful responses are *usually* met with a full JSON response of
+# the object you're operating on, or a collection of JSON objects that
+# represent persisted values on the server. Sometimes, however, a
+# redirect or simple '200' will be returned back to the user.
+
 class CommentsController < ApplicationController
   respond_to :json, :html
   before_filter :find_comment, only: %w(show update destroy)
+  before_filter :authenticate_user!, except: %w(index show)
 
   # Collection view for Comments. Returns all comments filtered by a particular Link
   # or all comments on the site.
