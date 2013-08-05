@@ -4,7 +4,7 @@ each controller
       / TODO: Data bind dat vote box!
       span.votes
         = votes
-      a href='#' click="preview" #{title}
+      a href=url target='_blank' #{title}
     dd
       if voted
         strong voted!
