@@ -1,20 +1,21 @@
-linkTo 'top_links' class="title" | choonga.ng
+linkTo 'links' class="title" | choonga.ng
 span &nbsp;/&nbsp;
-linkTo 'latest_links' | latest
-span &nbsp;/&nbsp;
+/linkTo 'links.latest' | latest
+/span &nbsp;/&nbsp;
 linkTo 'comments' | comments
 span &nbsp;/&nbsp;
 if logged_in
-  linkTo 'submit_link' | post a link
+  linkTo 'links.submit' | post a link
 else
   modal href='/login' text='post a link'
 span &nbsp;/&nbsp;
 if logged_in
-  a href='/profile' profile
+  modal href='/profile' | profile
   span &nbsp;/&nbsp;
-  a href='/logout' log out
+  modal href='/logout' | log out
 else
   modal href='/login' text="log in"
-  /span &nbsp;/&nbsp;
-  /modal href='/signup' text="sign up"
+if registration_open
+  span &nbsp;/&nbsp;
+  modal href='/signup' text="sign up"
 
