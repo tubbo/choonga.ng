@@ -3,6 +3,6 @@ class Choongang.Link extends DS.Model
   name: DS.attr 'string'
   url: DS.attr 'string'
   votes: DS.attr 'number'
-  user: DS.belongsTo 'Choongang.User'
+  user: DS.attr 'string'
   service: DS.belongsTo 'Choongang.Service'
-  tag: DS.belongsTo 'Choongang.Tag'
+  tag: DS.attr 'string'

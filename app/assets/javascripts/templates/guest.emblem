@@ -1,5 +1,5 @@
-input type="text" value=view.name
-input type='password' value=view.password
+input type="text" placeholder="username" value=view.name
+input type='password' placeholder="password" value=view.password
 button.tiny log in
 if registration_open
   span &nbsp;/&nbsp;

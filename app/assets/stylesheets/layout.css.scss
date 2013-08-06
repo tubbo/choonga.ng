@@ -33,9 +33,12 @@ header {
       margin: 0 10px 0 0;
     }
 
-    button {
+    button.tiny {
       bottom: 4px;
       position: relative;
+      padding-bottom: 0.2em;
+      padding-top: 0.4075em;
+      padding-right: 0.875em;
     }
   }
 }

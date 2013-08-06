@@ -1,11 +1,12 @@
 /Choongang.LinkVoteView
 span posted by
-linkTo 'user' user.id
-  = user.name
+linkTo user user
+  = user
 span in
-linkTo 'tag' tag.id | #house
+linkTo tag tag
+  = tag
 unless standalone
   span &nbsp;|&nbsp;
-  linkTo 'link.comments' link | comments
+  linkTo 'link.comments' id | comments
 span &nbsp;|&nbsp;
-a target="_blank" href=url go &raquo;
+a href='#' click='preview' preview &raquo;
