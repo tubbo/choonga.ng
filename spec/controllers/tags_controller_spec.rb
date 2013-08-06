@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe TagsController do
+  include Devise::TestHelpers
   fixtures :tags
   let(:tag) { tags :house }
 

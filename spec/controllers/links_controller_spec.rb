@@ -1,8 +1,10 @@
 require 'spec_helper'
 
 describe LinksController do
-  fixtures :links
+  include Devise::TestHelpers
+  fixtures :links, :users
   let(:link) { links :afterhours }
+  before { sign_in users(:tubbo) }
 
   describe "viewing a collection" do
     context "of all links" do

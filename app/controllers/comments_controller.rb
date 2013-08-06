@@ -14,6 +14,7 @@
 
 class CommentsController < ApplicationController
   respond_to :json, :html
+  before_filter :find_link, only: %w(show create)
   before_filter :find_comment, only: %w(show update destroy)
   before_filter :authenticate_user!, except: %w(index show)
 
@@ -22,6 +23,7 @@ class CommentsController < ApplicationController
   #
   # GET /links/1/comments
   def index
+    find_link if params[:link_id].present?
     @comments = resource.where search_params
 
     respond_with @comments
@@ -41,7 +43,7 @@ class CommentsController < ApplicationController
     @comment = resource.new post_params
 
     if @comment.save
-      respond_with @comment, notice: "Comment posted."
+      respond_with [@link, @comment], notice: "Comment posted."
     else
       render json: { errors: @comment.errors.full_messages }, \
         alert: "Error posting comment."

@@ -95,15 +95,10 @@ class LinksController < ApplicationController
     redirect_to links_path, with_message
   end
 
-  private
-  def resource
-    if @tag.present?
-      @tag.links
-    else
-      Link
-    end
-  end
+  protected
+  alias resource link_resource
 
+  private
   def find_tag
     return true unless params[:tag_id].present?
 
@@ -111,13 +106,6 @@ class LinksController < ApplicationController
 
     render json: { errors: ['Tag not found'] }, status: 404 and return \
       unless @tag.present?
-  end
-
-  def find_link
-    @link = resource.where(id: params[:id]).first
-
-    render json: { errors: ['Link not found'] }, status: 404 and return \
-      unless @link.present?
   end
 
   def search_params

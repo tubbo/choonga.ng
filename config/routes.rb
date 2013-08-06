@@ -14,7 +14,7 @@ Choongang::Application.routes.draw do
 
   resources :tags, only: %w(show) do
     resources :links, only: %w(index) do
-      resources :comments, only: %w(index show)
+      resources :comments, only: %w(index show create update destroy)
     end
   end
 

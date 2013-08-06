@@ -13,6 +13,8 @@ class Link < ActiveRecord::Base
   belongs_to :tag
   belongs_to :user
 
+  has_many :comments
+
   attr_accessor :tag_name
 
   #before_validation :find_service_from_url
