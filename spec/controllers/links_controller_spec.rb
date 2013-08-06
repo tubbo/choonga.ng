@@ -71,19 +71,14 @@ describe LinksController do
         title: 'test',
         url: 'http://example.com',
         service_id: link.service_id,
-        tag_id: link.tag_id
+        tag_id: link.tag_id,
+        user_id: link.user_id
       }
     end
 
     context "with valid parameters" do
       before do
         post :create, link: params, format: 'json'
-      end
-
-      it "has a service id" do
-        params[:service_id].should be_present
-        params[:service_id].should_not be_blank
-        params[:service_id].should == link.service_id
       end
 
       it "redirects to the post" do

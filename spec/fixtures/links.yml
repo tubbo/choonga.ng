@@ -3,8 +3,10 @@ afterhours:
   url: 'http://soundcloud.com/wonderbars/after-hours'
   service: soundcloud
   tag: house
+  user: tubbo
 justthestart:
   title: 'just the start'
   url: 'http://soundcloud.com/wonderbars/just-the-start'
   service: soundcloud
   tag: house
+  user: tubbo
