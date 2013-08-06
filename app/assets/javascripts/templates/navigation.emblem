@@ -4,18 +4,9 @@ span &nbsp;/&nbsp;
 /span &nbsp;/&nbsp;
 linkTo 'comments' | comments
 span &nbsp;/&nbsp;
-if logged_in
+if current_user
   linkTo 'links.submit' | post a link
 else
   modal href='/login' text='post a link'
 span &nbsp;/&nbsp;
-if logged_in
-  modal href='/profile' | profile
-  span &nbsp;/&nbsp;
-  modal href='/logout' | log out
-else
-  modal href='/login' text="log in"
-if registration_open
-  span &nbsp;/&nbsp;
-  modal href='/signup' text="sign up"
-
+Choongang.UserAuthView
