@@ -1,9 +1,9 @@
 /Choongang.LinkVoteView
 span posted by
-linkTo user user
+linkTo 'user' user
   = user
 span in
-linkTo tag tag
+linkTo 'tag' tag
   = tag
 unless standalone
   span &nbsp;|&nbsp;

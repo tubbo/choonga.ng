@@ -27,8 +27,6 @@ class Link < ActiveRecord::Base
   #validates :tag_id, presence: true
   #validates :user_id, presence: true
 
-  scope :latest, -> { order 'created_at desc' }
-
   private
   def find_service_from_url
     unless service_id.present?

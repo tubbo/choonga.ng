@@ -1,7 +1,5 @@
 linkTo 'links' class="title" | choonga.ng
 span &nbsp;/&nbsp;
-/linkTo 'links.latest' | latest
-/span &nbsp;/&nbsp;
 linkTo 'comments' | comments
 span &nbsp;/&nbsp;
 if current_user

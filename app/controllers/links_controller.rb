@@ -28,17 +28,6 @@ class LinksController < ApplicationController
     respond_with @links
   end
 
-  # Return a collection of links ordered by the date at which they were
-  # created, descending. Used for the "latest" page on the frontend app,
-  # but can also be searched just like /links.
-  #
-  # GET /links/latest
-  def latest
-    @links = resource.latest.where search_params
-
-    respond_with @links
-  end
-
   # Return the JSON information for a single Link.
   #
   # GET /links/1
