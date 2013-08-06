@@ -1,24 +1,4 @@
-each controller
-  .info.columns.large-8
-    dt
-      / TODO: Data bind dat vote box!
-      span.votes
-        = votes
-      a href=url target='_blank' #{title}
-    dd
-      if voted
-        strong voted!
-      else
-        span.votebox
-          strong vote&nbsp;
-          a href='#' click='upvote' up
-          span &nbsp;/&nbsp;
-          a href='#' click='downvote' down
-      span &nbsp;|&nbsp;
-      linkTo 'link' id | comments
-      span &nbsp;|&nbsp;
-      a target="_blank" href=url go &raquo;
-  .preview.columns.large-4
-    / Preview pane
-else
-  em there are no links to display in this category
+.row
+  h4 = title
+.row
+  Choongang.LinksListingView

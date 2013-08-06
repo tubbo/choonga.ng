@@ -1,0 +1,2 @@
+span.votes = votes
+a href='#' click="preview" #{title}

@@ -1,19 +1,9 @@
 dl.links.row
   .info.columns.large-8
-    dt
-      / TODO: Data bind dat vote box!
-      span.votes = votes
-      a href='#' click="preview" #{title}
-    dd
-      if voted
-        strong voted!
-      else
-        strong vote&nbsp;
-        a href='#' click='upvote' up
-        span &nbsp;/&nbsp;
-        a href='#' click='downvote' down
-      span &nbsp;|&nbsp;
-      a target="_blank" href=url go &raquo;
+    Choongang.LinkTitleView
+    Choongang.LinkMetadataView
   .preview.columns.large-4
     / Preview pane.row
-Choongang.LinkCommentsView
+h4
+  linkTo 'link.comments' | view comments
+= outlet
