@@ -25,6 +25,7 @@ gem 'uglifier',         '~> 1.3'
 gem 'ember-rails'
 gem 'emblem-rails'
 gem 'ember_script-rails'
+gem 'ember-auth-rails'
 
 group :development do
   gem 'meta_request'

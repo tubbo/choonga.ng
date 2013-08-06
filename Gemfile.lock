@@ -87,6 +87,11 @@ GEM
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
     diff-lcs (1.2.4)
+    ember-auth-rails (4.0.3)
+      ember-auth-source
+      rails
+    ember-auth-source (7.1.0)
+      ember-source (>= 1.0.0.rc6.2)
     ember-data-source (0.13)
       ember-source
     ember-rails (0.12.0)
@@ -273,6 +278,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails
   devise
+  ember-auth-rails
   ember-rails
   ember_script-rails
   emblem-rails

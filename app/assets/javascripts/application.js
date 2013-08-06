@@ -8,4 +8,5 @@
 //= require handlebars
 //= require ember
 //= require ember-data
+//= require ember-auth
 //= require choongang
