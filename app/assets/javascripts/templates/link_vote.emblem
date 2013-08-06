@@ -1,0 +1,7 @@
+if voted
+  strong voted!
+else
+  strong vote&nbsp;
+  a href='#' click='upvote' up
+  span &nbsp;/&nbsp;
+  a href='#' click='downvote' down

@@ -1,2 +1,2 @@
 span.votes = votes
-a href='#' click="preview" #{title}
+a href=url target='_blank' = title

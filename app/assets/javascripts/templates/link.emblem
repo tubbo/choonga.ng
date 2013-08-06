@@ -4,6 +4,7 @@ dl.links.row
     Choongang.LinkMetadataView
   .preview.columns.large-4
     / Preview pane.row
-h4
-  linkTo 'link.comments' | view comments
-= outlet
+if standalone
+  h4
+    linkTo 'link.comments' | view comments
+  = outlet
