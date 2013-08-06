@@ -5,7 +5,13 @@ ActiveAdmin.register User do
   end
 
   form do |f|
-    f.inputs :name, :password, :password_confirmation
+    f.inputs :name, :email, :password, :password_confirmation
     f.actions
+  end
+
+  controller do
+    def permitted_params
+      params.permit user: [:name, :email, :password, :password_confirmation]
+    end
   end
 end

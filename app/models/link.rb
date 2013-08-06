@@ -19,6 +19,7 @@ class Link < ActiveRecord::Base
 
   #before_validation :find_service_from_url
   #before_validation :find_tag_id_from_tag_name
+  before_validation :set_votes_to_zero
 
   validates :title, presence: true
   validates :url, presence: true
@@ -44,5 +45,9 @@ class Link < ActiveRecord::Base
 
   def find_tag_id_from_tag_name
     self.tag_id ||= Tag.where(name: tag_name).first.id
+  end
+
+  def set_votes_to_zero
+    self.votes ||= 0
   end
 end

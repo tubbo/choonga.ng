@@ -17,38 +17,36 @@ dl.links {
     font-size: 13px;
     color: #777;
   }
-  dt {
-    font-size: 24px;
+}
+dt {
+  font-size: 24px;
 
-    a {
-      position: relative;
-      top: 2px;
-      color: darken(#2ba6cb, 20%);
+  a {
+    position: relative;
+    top: 2px;
+    color: darken(#2ba6cb, 20%);
 
-      &:hover { color: darken(#2ba6cb, 40%); }
-    }
-
-    .votes {
-      font-size: 15px;
-      color: #CCC;
-      padding: 10px;
-      //background: #EEE;
-    }
+    &:hover { color: darken(#2ba6cb, 40%); }
   }
-  dd {
-    margin-left: 45px;
-    font-size: 12px;
+
+  .votes, .author {
+    font-size: 15px;
     color: #CCC;
-
-    a {
-      &:hover { color: darken(#2ba6cb, 20%); }
-    }
-
-    strong {
-      color: darken(#CCC, 20%);
-      font-weight: normal;
-    }
+    padding: 10px;
+    //background: #EEE;
   }
 }
+dd {
+  margin-left: 45px;
+  font-size: 12px;
+  color: #CCC;
 
+  a {
+    &:hover { color: darken(#2ba6cb, 20%); }
+  }
 
+  strong {
+    color: darken(#CCC, 20%);
+    font-weight: normal;
+  }
+}

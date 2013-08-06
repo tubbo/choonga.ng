@@ -1,0 +1,6 @@
+input type="text" value=view.name
+input type='password' value=view.password
+button.tiny log in
+if registration_open
+  span &nbsp;/&nbsp;
+  modal href='/signup' text="sign up"

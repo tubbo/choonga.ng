@@ -1,9 +1,4 @@
-if current_user
-  modal href='/profile' | profile
-  span &nbsp;/&nbsp;
-  modal href='/logout' | log out
+if Choongang.Auth.signedIn
+  Choongang.UserView
 else
-  modal href='/login' text="log in"
-if registration_open
-  span &nbsp;/&nbsp;
-  modal href='/signup' text="sign up"
+  Choongang.GuestView
