@@ -44,6 +44,18 @@ on the user edit page, and you can generate documentation by typing
   users of the site to be identified with the application. Users can
   comment on, vote on and post links.
 
+### HTTP APIs
+
+We expose these objects through our various HTTP APIs. All API calls must
+include an authentication token passed along with each request.
+
+- The [Links API][LinksController] is responsible for retrieving links from
+  the database as well as posting new ones.
+- The [Comments API][CommentsController] allows for posting small comments to
+  existing Links.
+- The [Tags Read-Only API][TagsController] presents more information about
+  each tag on the site.
+
 ## Setup
 
 This is assuming you know what goes into installing a Rails app..
@@ -102,3 +114,8 @@ open source and governed by the terms of the license below:
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
+
+[LinksController]: http://rubydoc.info/github/tubbo/choonga.ng/frames/LinksController
+[CommentsController]: http://rubydoc.info/github/tubbo/choonga.ng/frames/CommentsController
+[TagsController]: http://rubydoc.info/github/tubbo/choonga.ng/frames/TagsController
+
